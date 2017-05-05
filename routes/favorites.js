@@ -39,6 +39,7 @@ for (var i=0; i<req.session.favorites.length; i++)
 		break;
 	}
 }
+res.redirect('/favorites');
 
 });
 
