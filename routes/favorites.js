@@ -29,5 +29,17 @@ req.session.favorites.push(req.body);
 res.redirect('/favorites');
 
 });
+//delete favorite
+router.post('/deleteFavorite', function(req, res, next){
+for (var i=0; i<req.session.favorites.length; i++)
+{
+	if (req.body.session.favorites[i] == req.body)
+	{
+		req.body.session.favorites.splice(i, 1);
+		break;
+	}
+}
+
+});
 
 module.exports = router;

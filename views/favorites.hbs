@@ -7,6 +7,14 @@
 </a>
 <p class="favtitle">{{this.title}}</p>
 <p class="favdate">{{this.date}}</p>
+<form action="/deleteFavorite" method="POST">
+      <input type="hidden" name="nasa_url" value="{{apod.nasa_url}}">
+
+	  <input name="delete" type="submit" value="{{this._id}}">Delete</input>
+    
+    </form>
+	
+
 </div>
 {{else}}
 <p>No favorites saved yet.</p>
